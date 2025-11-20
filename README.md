@@ -1,15 +1,15 @@
-# Stoch - Discography
+# Stoch - AI Funk & Disco Artist
 
 🌐 **Live Site:** [https://egil10.github.io/stoch/](https://egil10.github.io/stoch/)
 
-Welcome to the production log and artist site for **Stoch**, an AI-driven music project that bends funk, disco, and futuristic textures across every key. This repository hosts three complete albums, artwork assets, song blueprints, and track notes, keeping the creative flow organized from first riff to final master.
+Welcome to **Stoch**, an AI-driven music project that crafts kaleidoscopic soundscapes where funk meets disco, where CHIC collides with Daft Punk, and where every key tells a story. This repository hosts three complete albums with full track listings, artwork, and an interactive web player—bringing the groove directly to your browser.
 
-## Albums
+## 🎵 Featured Albums
 
 ### Chromatic Drift
-A kaleidoscopic concept album exploring funk, disco, and future-soul across 12 keys. Each track lives in a unique key, pulling references from CHIC, Prince, Parcels, Khruangbin, Daft Punk, Japanese City Pop, Egyptian Funk, and more. The album showcases spectrum-storytelling through instrumental funk tracks that journey from Nile Rodgers-style grooves to Arabian disco-funk.
+A kaleidoscopic concept album exploring funk, disco, and future-soul across all 12 keys. Each track lives in a unique key, pulling references from CHIC, Prince, Parcels, Khruangbin, Daft Punk, Japanese City Pop, Egyptian Funk, and more. The album showcases spectrum-storytelling through instrumental funk tracks that journey from Nile Rodgers-style grooves to Arabian disco-funk.
 
-**14 tracks** including:
+**12 tracks** including:
 - Another Day of Spring (A)
 - Ain't it Sharp (A#)
 - Brown Emotion (B)
@@ -22,7 +22,6 @@ A kaleidoscopic concept album exploring funk, disco, and future-soul across 12 k
 - Fuji Funkline (F#)
 - Golden Riviera (G)
 - Gulfstream (G#)
-- And more...
 
 ### Better Times 3000
 A warm, nostalgic disco-funk album inspired by the golden era of 1970s and 1980s dance music. Features Chic-inspired instrumentation with Nile Rodgers-style guitar, Bernard Edwards-influenced bass, and warm female backing vocals throughout. The album blends classic disco energy with modern production polish, creating a timeless sound that feels like dancing through the golden hour.
@@ -57,37 +56,92 @@ An electronic exploration of rhythmic elements, blending futuristic sound design
 - At Ways End
 - Rain & Echoes
 
-## Repository layout
+## 🎮 Interactive Web Player
 
-- `index.html` / `styles.css` - Artist landing site with album showcases, located at the repo root for GitHub Pages deployment
-- `albums/` - Contains all three albums with their complete track listings, cover art, and markdown documentation
-  - `albums/Chromatic Drift/` - Album cover art (PNG), all 14 MP3 tracks, and production notes
-  - `albums/Better Times 3000/` - Album cover art (PNG), all 12 MP3 tracks, and production notes
-  - `albums/Elements/` - Album cover art (PNG), all 14 MP3 tracks, and production notes
-- `assets/` - Visual collateral, sketches, alternate covers, typography experiments
-- `docs/` - Template and documentation files for song planning workflow
+The site features a fully-functional, modern music player with:
 
-## Song planning workflow
+- **Track Playback**: Play any track directly in your browser
+- **Album Controls**: Play entire albums, shuffle tracks, and repeat modes (off, one, all)
+- **Now Playing Bar**: Persistent player bar at the bottom with track info, progress, and controls
+- **Progress Seeking**: Click or tap anywhere on the progress bar to jump to that position
+- **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices
+- **Theme Toggle**: Switch between light and dark modes
+- **Smooth Animations**: GPU-accelerated animations for high FPS performance
 
-1. Open the markdown file for the album you want to explore
-2. Each album's markdown file contains detailed production notes for each track
-3. When tracks are rendered, export the MP3 and move it into the appropriate album folder alongside the final artwork
-4. Update the markdown file with any additional production notes or references
+## 📁 Repository Structure
 
-## GitHub Pages site
+```
+stoch/
+├── index.html              # Main artist landing page
+├── styles.css              # Complete stylesheet with responsive design
+├── player.js               # Audio player logic and controls
+├── theme.js                # Light/dark mode theme manager
+├── visualizer.js           # Audio visualizer (optional)
+├── albums/                 # All three complete albums
+│   ├── Chromatic Drift/    # 12 MP3 tracks + cover art
+│   ├── Better Times 3000/  # 12 MP3 tracks + cover art
+│   └── Elements/           # 14 MP3 tracks + cover art
+├── assets/                 # Visual assets and artwork
+│   └── images/             # Album covers and images
+└── LICENSE                 # MIT License
+```
 
-The site showcases both albums with:
-- Featured album covers and artwork
-- Complete track listings for each album
-- Playable audio tracks
-- Artist bio and creative process
-- Links to streaming platforms and social media
+## 🚀 Getting Started
 
-**Preview locally:** run `npx serve .` (or use any static-file server) from the repo root and open `http://localhost:3000`.
+### Local Development
 
-**Publish:** set GitHub Pages to deploy from the root of the `main` branch. The vibrant artist page highlights both albums, track details, and contact links.
+1. Clone the repository:
+```bash
+git clone https://github.com/egil10/stoch.git
+cd stoch
+```
 
-## Creative influences
+2. Serve locally:
+```bash
+npx serve .
+```
+
+3. Open your browser:
+```
+http://localhost:3000
+```
+
+### Deployment
+
+The site is configured for GitHub Pages deployment:
+
+1. Set GitHub Pages to deploy from the root of the `main` branch
+2. The site will be available at `https://[username].github.io/stoch/`
+
+## 🎨 Features
+
+### Player Functionality
+- ✅ Play/pause individual tracks
+- ✅ Play entire albums with one click
+- ✅ Shuffle mode per album
+- ✅ Repeat modes: Off, One, All
+- ✅ Track progress with seek functionality
+- ✅ Previous/next track navigation
+- ✅ Volume control
+- ✅ Track reset when switching songs
+
+### Design & UX
+- ✅ Modern, clean Scandinavian-style design
+- ✅ Fully responsive (mobile, tablet, desktop)
+- ✅ Light/dark theme toggle
+- ✅ Smooth animations and transitions
+- ✅ Touch-optimized for mobile devices
+- ✅ Accessible controls (44px minimum touch targets)
+
+### Technical
+- ✅ Vanilla JavaScript (no frameworks)
+- ✅ CSS Grid and Flexbox layouts
+- ✅ GPU-accelerated animations
+- ✅ Web Audio API integration
+- ✅ Local storage for theme preferences
+- ✅ Semantic HTML5 structure
+
+## 🎭 Creative Influences
 
 - **Funk & Disco:** CHIC, Nile Rodgers, Bernard Edwards, Prince, Parcels
 - **Modern Funk:** Daft Punk, Vulfpeck, Cory Wong, Chromeo
@@ -95,16 +149,31 @@ The site showcases both albums with:
 - **Indie & Fusion:** Khruangbin, Tame Impala, Benny Sings
 - **Classic Disco:** Bee Gees, Sister Sledge, Wild Cherry, Ohio Players
 
-## Next ideas
+## 🔮 Future Ideas
 
 - Add individual track pages with detailed production notes
 - Create remix packs and stems folders per album
 - Build an interactive visualizer for each track
 - Add a making-of blog section
 - Render album art variants and create a gallery
+- Add playlist functionality
+- Integrate with music streaming platforms
 
-Have fun drifting through the spectrum.
+## 📝 Song Planning Workflow
 
-## License
+1. Open the markdown file for the album you want to explore
+2. Each album's markdown file contains detailed production notes for each track
+3. When tracks are rendered, export the MP3 and move it into the appropriate album folder alongside the final artwork
+4. Update the markdown file with any additional production notes or references
+
+## 🤝 Contributing
+
+This is a personal artist project, but suggestions and feedback are welcome! Feel free to open issues or submit pull requests for improvements.
+
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+**Welcome to the drift.** 🎸✨
