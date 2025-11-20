@@ -402,10 +402,10 @@ class StochPlayer {
 
   showNowPlayingBar() {
     if (this.nowPlayingBar) {
-      this.nowPlayingBar.style.display = 'flex';
+      this.nowPlayingBar.style.display = 'grid';
       this.nowPlayingBar.classList.remove('hidden');
       // Add bottom padding to body to prevent content from being hidden
-      document.body.style.paddingBottom = '110px';
+      document.body.style.paddingBottom = '80px';
     }
   }
 

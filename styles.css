@@ -760,14 +760,16 @@ code {
   bottom: 0;
   left: 0;
   right: 0;
-  min-height: 110px;
+  min-height: 80px;
+  max-height: 80px;
   background: var(--panel-bright);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-top: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+  display: grid;
+  grid-template-columns: auto 1fr 200px;
+  gap: 1.5rem;
+  align-items: center;
   padding: 0.75rem max(2rem, 5vw);
   z-index: 1000;
   transform: translateZ(0);
@@ -778,13 +780,12 @@ code {
 }
 
 .now-playing-bar-content {
-  display: grid;
-  grid-template-columns: auto 30% 1fr 200px;
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   align-items: center;
   flex: 1;
-  min-height: 64px;
-  position: relative;
+  min-width: 0;
 }
 
 [data-theme="light"] .now-playing-bar {
@@ -798,27 +799,37 @@ code {
 @media (max-width: 1200px) {
   .now-playing-bar {
     padding: 0.75rem 1.5rem;
-    gap: 1.25rem;
+    gap: 1rem;
+  }
+  
+  .now-playing-bar-content {
+    gap: 0.4rem;
   }
 }
 
 @media (max-width: 768px) {
   .now-playing-bar {
-    min-height: 100px;
+    min-height: 80px;
+    max-height: 80px;
     padding: 0.75rem 1rem;
+    grid-template-columns: auto 1fr 80px;
+    gap: 0.75rem;
   }
   
   .now-playing-bar-content {
-    grid-template-columns: auto 1fr 100px;
-    gap: 1rem;
+    gap: 0.35rem;
   }
   
   .now-playing-track {
     display: none;
   }
   
+  .now-playing-extra {
+    margin-left: 0.5rem;
+  }
+  
   body {
-    padding-bottom: 100px !important;
+    padding-bottom: 80px !important;
   }
 }
 
@@ -829,41 +840,11 @@ code {
 }
 
 .now-playing-progress-container {
-  position: absolute;
-  left: max(2rem, 5vw);
-  right: max(2rem, 5vw);
-  bottom: 8px;
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  width: 100%;
   flex-shrink: 0;
-  height: 24px;
-  background: transparent;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.now-playing-progress-container > * {
-  pointer-events: auto;
-}
-
-[data-theme="light"] .now-playing-progress-container {
-  background: transparent;
-}
-
-@media (max-width: 1200px) {
-  .now-playing-progress-container {
-    left: 1.5rem;
-    right: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .now-playing-progress-container {
-    left: 1rem;
-    right: 1rem;
-    gap: 0.5rem;
-  }
 }
 
 .now-playing-time-info {
@@ -1075,13 +1056,22 @@ code {
   position: relative;
   overflow: hidden;
   transform: translateZ(0);
-  will-change: height;
-  transition: height 150ms ease;
+  will-change: height, background-color;
+  transition: height 150ms ease, background-color 150ms ease;
   backface-visibility: hidden;
+}
+
+[data-theme="light"] .now-playing-progress-bar {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .now-playing-progress-bar:hover {
   height: 6px;
+  background: var(--progress-bg-hover, rgba(255, 255, 255, 0.3));
+}
+
+[data-theme="light"] .now-playing-progress-bar:hover {
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .now-playing-progress-fill {
@@ -1089,23 +1079,33 @@ code {
   top: 0;
   left: 0;
   height: 100%;
-  width: 0%;
+  width: 100%;
   background: linear-gradient(90deg, var(--primary), var(--secondary));
   transform: scaleX(0);
   transform-origin: left;
-  transform: translateZ(0);
   will-change: transform;
   transition: none;
   backface-visibility: hidden;
   border-radius: 2px;
+  box-shadow: 0 0 4px rgba(var(--primary-rgb, 138, 43, 226), 0.4);
+}
+
+.now-playing-progress-bar:hover .now-playing-progress-fill {
+  box-shadow: 0 0 8px rgba(var(--primary-rgb, 138, 43, 226), 0.6);
 }
 
 .now-playing-time {
   font-size: 0.75rem;
   color: var(--muted);
   font-family: 'Space Grotesk', monospace;
+  font-variant-numeric: tabular-nums;
   min-width: 2.5rem;
   text-align: center;
+  flex-shrink: 0;
+}
+
+[data-theme="light"] .now-playing-time {
+  color: var(--text-secondary);
 }
 
 .now-playing-extra {
@@ -1113,6 +1113,7 @@ code {
   align-items: center;
   gap: 0.5rem;
   justify-content: flex-end;
+  margin-left: 1rem;
 }
 
 .volume-btn {
@@ -1174,7 +1175,7 @@ code {
   position: relative;
   z-index: 1;
   transition: border-color 0.3s ease, background-color 0.3s ease;
-  margin-bottom: 90px; /* Space for now playing bar */
+  margin-bottom: 80px; /* Space for now playing bar */
 }
 
 .footer-container {

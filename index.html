@@ -931,15 +931,6 @@
 
     <!-- Now Playing Bar -->
     <div class="now-playing-bar" id="now-playing-bar" style="display: none;">
-      <!-- 8-bit Visualizer -->
-      <div class="visualizer-container" id="visualizer-container">
-        <canvas id="visualizer-canvas" class="visualizer-canvas"></canvas>
-        <button class="visualizer-toggle" id="visualizer-toggle" aria-label="Toggle visualizer" title="Toggle visualizer">
-          <svg class="icon-visualizer" viewBox="0 0 24 24" width="14" height="14">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" fill="currentColor"/>
-          </svg>
-        </button>
-      </div>
       <div class="now-playing-track">
         <div class="now-playing-artwork">
           <img id="now-playing-img" src="" alt="Now Playing" />
@@ -968,13 +959,13 @@
             </button>
           </div>
         </div>
-      </div>
-      <div class="now-playing-progress-container">
-        <span class="now-playing-time" id="now-playing-current-time">0:00</span>
-        <div class="now-playing-progress-bar" id="now-playing-progress-bar" data-action="seek">
-          <div class="now-playing-progress-fill" id="now-playing-progress-fill"></div>
+        <div class="now-playing-progress-container">
+          <span class="now-playing-time" id="now-playing-current-time">0:00</span>
+          <div class="now-playing-progress-bar" id="now-playing-progress-bar" data-action="seek">
+            <div class="now-playing-progress-fill" id="now-playing-progress-fill"></div>
+          </div>
+          <span class="now-playing-time" id="now-playing-total-time">0:00</span>
         </div>
-        <span class="now-playing-time" id="now-playing-total-time">0:00</span>
       </div>
       <div class="now-playing-extra">
         <button class="now-playing-btn volume-btn" id="volume-btn" aria-label="Volume">
@@ -999,6 +990,7 @@
             <ul class="footer-links">
               <li><a href="#albums">Chromatic Drift</a></li>
               <li><a href="#albums">Better Times 3000</a></li>
+              <li><a href="#albums">Elements</a></li>
             </ul>
           </div>
           
