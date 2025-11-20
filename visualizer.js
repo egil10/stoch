@@ -155,7 +155,9 @@ class BitVisualizer {
 
   clearCanvas() {
     if (!this.ctx || !this.canvas) return;
-    this.ctx.fillStyle = 'rgba(5, 1, 10, 1)';
+    // Use CSS variable-based color detection
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    this.ctx.fillStyle = isLight ? '#f5f5f7' : 'rgba(5, 1, 10, 1)';
     this.ctx.fillRect(0, 0, this.canvasSize, this.canvasSize);
   }
 
@@ -173,8 +175,9 @@ class BitVisualizer {
     // Get frequency data
     this.analyser.getByteFrequencyData(this.dataArray);
 
-    // Clear canvas with dark background
-    this.ctx.fillStyle = 'rgba(5, 1, 10, 0.9)';
+    // Clear canvas with theme-appropriate background
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    this.ctx.fillStyle = isLight ? 'rgba(245, 245, 247, 0.95)' : 'rgba(5, 1, 10, 0.9)';
     this.ctx.fillRect(0, 0, this.canvasSize, this.canvasSize);
 
     // Draw 8-bit style circle visualizer

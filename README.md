@@ -2,7 +2,7 @@
 
 🌐 **Live Site:** [https://egil10.github.io/stoch/](https://egil10.github.io/stoch/)
 
-Welcome to the production log and artist site for **Stoch**, an AI-driven music project that bends funk, disco, and futuristic textures across every key. This repository hosts two complete albums, artwork assets, song blueprints, and track notes, keeping the creative flow organized from first riff to final master.
+Welcome to the production log and artist site for **Stoch**, an AI-driven music project that bends funk, disco, and futuristic textures across every key. This repository hosts three complete albums, artwork assets, song blueprints, and track notes, keeping the creative flow organized from first riff to final master.
 
 ## Albums
 
@@ -39,12 +39,31 @@ A warm, nostalgic disco-funk album inspired by the golden era of 1970s and 1980s
 - Cold but Free / Cold No More
 - Dawn of the Night
 
+### Elements
+An electronic exploration of rhythmic elements, blending futuristic sound design with classic funk foundations. This album deconstructs and rebuilds funk & disco elements through an electronic lens, creating immersive soundscapes that pulse with energy and groove.
+
+**14 tracks** including:
+- Riding the High
+- At Half Pulse / At Half Pulse (Revisited)
+- Riding the High (Emphasis)
+- Call Me Now
+- Calling You
+- Dropping In
+- Rhodesian Sun
+- Ride High Ride Low
+- Ride With Me
+- Falling Through the Sound
+- Having Fallen Once
+- At Ways End
+- Rain & Echoes
+
 ## Repository layout
 
 - `index.html` / `styles.css` - Artist landing site with album showcases, located at the repo root for GitHub Pages deployment
-- `albums/` - Contains both albums with their complete track listings, cover art, and markdown documentation
+- `albums/` - Contains all three albums with their complete track listings, cover art, and markdown documentation
   - `albums/Chromatic Drift/` - Album cover art (PNG), all 14 MP3 tracks, and production notes
   - `albums/Better Times 3000/` - Album cover art (PNG), all 12 MP3 tracks, and production notes
+  - `albums/Elements/` - Album cover art (PNG), all 14 MP3 tracks, and production notes
 - `assets/` - Visual collateral, sketches, alternate covers, typography experiments
 - `docs/` - Template and documentation files for song planning workflow
 
