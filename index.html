@@ -907,7 +907,7 @@
               </ol>
             </div>
           </div>
-        </article>
+          </article>
       </section>
 
       <section class="panel panel--bright">
@@ -953,26 +953,28 @@
           <div class="now-playing-album" id="now-playing-album">Select a track to play</div>
         </div>
       </div>
-      <div class="now-playing-controls">
-        <div class="now-playing-main-controls">
-          <button class="now-playing-btn prev-btn" id="prev-track-btn" data-action="prev-track" aria-label="Previous Track">
-            <svg class="icon-prev" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
-          </button>
-          <button class="now-playing-btn play-pause-btn" id="now-playing-main-play-btn" data-action="play-track" aria-label="Play/Pause">
-            <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
-          </button>
-          <button class="now-playing-btn next-btn" id="next-track-btn" data-action="next-track" aria-label="Next Track">
-            <svg class="icon-next" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
-          </button>
-        </div>
-        <div class="now-playing-progress-container">
-          <span class="now-playing-time" id="now-playing-current-time">0:00</span>
-          <div class="now-playing-progress-bar" id="now-playing-progress-bar" data-action="seek">
-            <div class="now-playing-progress-fill" id="now-playing-progress-fill"></div>
+      <div class="now-playing-bar-content">
+        <div class="now-playing-controls">
+          <div class="now-playing-main-controls">
+            <button class="now-playing-btn prev-btn" id="prev-track-btn" data-action="prev-track" aria-label="Previous Track">
+              <svg class="icon-prev" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+            </button>
+            <button class="now-playing-btn play-pause-btn" id="now-playing-main-play-btn" data-action="play-track" aria-label="Play/Pause">
+              <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+            </button>
+            <button class="now-playing-btn next-btn" id="next-track-btn" data-action="next-track" aria-label="Next Track">
+              <svg class="icon-next" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+            </button>
           </div>
-          <span class="now-playing-time" id="now-playing-total-time">0:00</span>
         </div>
+      </div>
+      <div class="now-playing-progress-container">
+        <span class="now-playing-time" id="now-playing-current-time">0:00</span>
+        <div class="now-playing-progress-bar" id="now-playing-progress-bar" data-action="seek">
+          <div class="now-playing-progress-fill" id="now-playing-progress-fill"></div>
+        </div>
+        <span class="now-playing-time" id="now-playing-total-time">0:00</span>
       </div>
       <div class="now-playing-extra">
         <button class="now-playing-btn volume-btn" id="volume-btn" aria-label="Volume">

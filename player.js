@@ -168,11 +168,13 @@ class StochPlayer {
 
     if (!track) return;
 
-    // Pause current track if different
+    // Pause and reset current track if different
     if (this.currentAudio && this.currentAudio !== track.audio) {
       this.currentAudio.pause();
+      this.currentAudio.currentTime = 0; // Reset to beginning
       if (this.currentTrack) {
         this.updateTrackUI(this.currentTrack, false);
+        this.resetTrackProgress(this.currentTrack);
       }
     }
 
@@ -184,7 +186,17 @@ class StochPlayer {
         track.audio.pause();
       }
     } else {
-      // Play new track
+      // Play new track - reset previous track position
+      if (this.currentTrack && this.currentTrack !== track) {
+        this.currentTrack.audio.currentTime = 0;
+        this.resetTrackProgress(this.currentTrack);
+      }
+      
+      // Reset new track to beginning if it was previously played
+      if (track.audio.currentTime > 0) {
+        track.audio.currentTime = 0;
+      }
+      
       this.currentTrack = track;
       this.currentAlbum = { id: albumId, element: albumEl };
       this.currentAudio = track.audio;
@@ -331,8 +343,8 @@ class StochPlayer {
     const progressBar = trackEl.querySelector('.progress-bar-fill');
     const currentTimeEl = trackEl.querySelector('.track-time');
     
-    if (progressBar && track.audio.duration) {
-      const percent = Math.min((track.audio.currentTime / track.audio.duration) * 100, 100);
+    if (progressBar && track.audio.duration && !isNaN(track.audio.duration)) {
+      const percent = Math.min(Math.max((track.audio.currentTime / track.audio.duration) * 100, 0), 100);
       // Use transform for better performance (GPU accelerated)
       progressBar.style.transform = `scaleX(${percent / 100})`;
       progressBar.style.transformOrigin = 'left';
@@ -390,10 +402,10 @@ class StochPlayer {
 
   showNowPlayingBar() {
     if (this.nowPlayingBar) {
-      this.nowPlayingBar.style.display = 'grid';
+      this.nowPlayingBar.style.display = 'flex';
       this.nowPlayingBar.classList.remove('hidden');
       // Add bottom padding to body to prevent content from being hidden
-      document.body.style.paddingBottom = '90px';
+      document.body.style.paddingBottom = '110px';
     }
   }
 
@@ -477,7 +489,8 @@ class StochPlayer {
   }
 
   updateNowPlayingProgress(track) {
-    if (!track.audio || !track.audio.duration) return;
+    if (!track.audio || !this.currentTrack || this.currentTrack !== track) return;
+    if (!track.audio.duration || isNaN(track.audio.duration)) return;
 
     const progressFill = document.getElementById('now-playing-progress-fill');
     const currentTime = document.getElementById('now-playing-current-time');
@@ -486,6 +499,7 @@ class StochPlayer {
     if (progressFill) {
       const percent = Math.min((track.audio.currentTime / track.audio.duration) * 100, 100);
       progressFill.style.transform = `scaleX(${percent / 100})`;
+      progressFill.style.transformOrigin = 'left';
     }
 
     if (currentTime) {
@@ -494,6 +508,33 @@ class StochPlayer {
 
     if (totalTime && track.audio.duration) {
       totalTime.textContent = this.formatTime(track.audio.duration);
+    }
+  }
+
+  resetTrackProgress(track) {
+    if (!track) return;
+    const trackEl = track.element;
+    const progressBar = trackEl.querySelector('.progress-bar-fill');
+    const currentTimeEl = trackEl.querySelector('.track-time');
+    
+    if (progressBar) {
+      progressBar.style.transform = 'scaleX(0)';
+    }
+    
+    if (currentTimeEl) {
+      currentTimeEl.textContent = '0:00';
+    }
+    
+    // Reset now playing bar progress
+    const progressFill = document.getElementById('now-playing-progress-fill');
+    const currentTime = document.getElementById('now-playing-current-time');
+    
+    if (progressFill) {
+      progressFill.style.transform = 'scaleX(0)';
+    }
+    
+    if (currentTime) {
+      currentTime.textContent = '0:00';
     }
   }
 
