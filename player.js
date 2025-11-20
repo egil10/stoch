@@ -135,7 +135,18 @@ class StochPlayer {
           volumeControl.style.display = volumeControl.style.display === 'none' ? 'flex' : 'none';
         }
       }
-    });
+    };
+    
+    document.addEventListener('click', handleInteraction);
+    document.addEventListener('touchstart', (e) => {
+      // Prevent default to avoid double-firing on mobile
+      if (e.target.closest('[data-action="seek"]') || 
+          e.target.closest('[data-action="play-track"]') ||
+          e.target.closest('[data-action="play-album"]')) {
+        e.preventDefault();
+        handleInteraction(e);
+      }
+    }, { passive: false });
 
     // Volume slider
     const volumeSlider = document.getElementById('volume-slider');
