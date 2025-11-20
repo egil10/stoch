@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stoch - Chromatic Drift</title>
+    <title>Stoch - AI Funk & Disco Artist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -13,116 +13,380 @@
     <header class="hero">
       <div class="hero__content">
         <p class="eyebrow">AI FUNK / DISCO / FUTURE-SOUL</p>
-        <h1>Chromatic Drift</h1>
-        <p class="lede">A kaleidoscopic album by Stoch, sculpted with AI instruments, human groove references, and fearless color theory.</p>
+        <h1>Stoch</h1>
+        <p class="lede">Crafting kaleidoscopic soundscapes where funk meets disco, where CHIC collides with Daft Punk, and where every key tells a story. Two albums. Infinite grooves. Welcome to the drift.</p>
         <div class="hero__cta">
-          <a class="btn primary" href="#album">Dive into the album</a>
+          <a class="btn primary" href="#albums">Explore Albums</a>
           <a class="btn secondary" href="https://open.spotify.com" target="_blank" rel="noreferrer">Follow on Spotify</a>
         </div>
       </div>
       <div class="hero__art">
-        <div class="art-glow"></div>
-        <span>Artwork incoming - stay tuned</span>
+        <div class="hero__art-grid">
+          <div class="hero__art-item">
+            <img src="assets/images/chromatic-drift-cover.png" alt="Chromatic Drift Album Cover" />
+            <div class="art-overlay"></div>
+          </div>
+          <div class="hero__art-item">
+            <img src="assets/images/better-times-3000-cover.png" alt="Better Times 3000 Album Cover" />
+            <div class="art-overlay"></div>
+          </div>
+        </div>
       </div>
     </header>
 
     <main>
-      <section id="album" class="panel panel--bright">
-        <div class="panel__text">
-          <h2>Spectrum-storytelling in every key</h2>
-          <p>Each song in Chromatic Drift lives in a unique key, pulling references from CHIC, Prince, Parcels, 90s house, and tomorrow's neural dreams. The repo hosts the stems, arrangements, and Suno-friendly prompts so you can peek behind the curtain.</p>
-          <ul class="meta">
-            <li><strong>Release window:</strong> Q1 2026</li>
-            <li><strong>Format:</strong> AI-assisted instrumentals + select vocal features</li>
-            <li><strong>HQ files:</strong> Will appear in <code>chromatic-drift-cover/</code></li>
-          </ul>
-        </div>
-        <div class="panel__card">
-          <h3>Where to dig in</h3>
-          <ol>
-            <li>Browse song plans by key in <code>song-plans/</code></li>
-            <li>Sketch visuals inside <code>assets/</code></li>
-            <li>Drop final MP3s into <code>chromatic-drift-cover/</code></li>
-          </ol>
-          <a href="https://github.com/ofurn/stoch" class="btn tertiary" target="_blank" rel="noreferrer">View the repo</a>
-        </div>
-      </section>
-
-      <section class="tracks">
+      <section id="albums" class="albums-section">
         <div class="section-heading">
-          <h2>Keys in orbit</h2>
-          <p>12 tracks, 12 moods. More will unlock as they exit the lab.</p>
+          <h2>Discography</h2>
+          <p>Two complete albums. Each a journey through time, genre, and color.</p>
         </div>
-        <div class="track-grid">
-          <article>
-            <h3>A</h3>
-            <p>Funk engine room. Nile Rodgers chops, Bernard Edwards swagger.</p>
-          </article>
-          <article>
-            <h3>A#</h3>
-            <p>Chrome-plated boogie with vocoder hooks and fluorescent bass.</p>
-          </article>
-          <article>
-            <h3>B</h3>
-            <p>Slow-burn future soul, VHS strings, midnight subway percussion.</p>
-          </article>
-          <article>
-            <h3>C</h3>
-            <p>Glassine house beats that melt into Balearic sunrise guitars.</p>
-          </article>
-          <article>
-            <h3>C#</h3>
-            <p>Industrial funk workout - laser toms, talkbox sermons, purple lights.</p>
-          </article>
-          <article>
-            <h3>D</h3>
-            <p>Neo-disco jammer with horns that feel like train signals.</p>
-          </article>
-          <article>
-            <h3>D#</h3>
-            <p>Broken-beat detour, dusty vinyl crackle over modular bleeps.</p>
-          </article>
-          <article>
-            <h3>E</h3>
-            <p>Cinematic synth funk, big chorus energy, confetti snares.</p>
-          </article>
-          <article>
-            <h3>F</h3>
-            <p>Velvet lounge groove - Rhodes, brushed drums, bass in octaves.</p>
-          </article>
-          <article>
-            <h3>F#</h3>
-            <p>Afrofuturist pulse, polyrhythmic percussion, sci-fi choirs.</p>
-          </article>
-          <article>
-            <h3>G</h3>
-            <p>Analog rave gospel. Choir pads and acid bass hold hands.</p>
-          </article>
-          <article>
-            <h3>G#</h3>
-            <p>Closing credits. Kaleidoscopic arps, glitch guitars, hopeful fade.</p>
-          </article>
-        </div>
+
+        <!-- Chromatic Drift Album -->
+        <article class="album-showcase">
+          <div class="album-showcase__artwork">
+            <img src="assets/images/chromatic-drift-cover.png" alt="Chromatic Drift Album Cover" />
+            <div class="album-glow album-glow--chromatic"></div>
+          </div>
+          <div class="album-showcase__content">
+            <div class="album-header">
+              <h2 class="album-title">Chromatic Drift</h2>
+              <p class="album-meta">14 Tracks • 2025 • Instrumental Funk/Disco</p>
+            </div>
+            <p class="album-description">A kaleidoscopic concept album exploring spectrum-storytelling through 12 keys. Each track lives in a unique musical space, pulling references from CHIC, Prince, Parcels, Khruangbin, Daft Punk, Japanese City Pop, Egyptian Funk, and more. Journey from Nile Rodgers-style grooves to Arabian disco-funk, from French Riviera sunsets to clinical Vulfpeck precision.</p>
+            <div class="album-tags">
+              <span class="tag">Funk</span>
+              <span class="tag">Disco</span>
+              <span class="tag">City Pop</span>
+              <span class="tag">World Music</span>
+              <span class="tag">Instrumental</span>
+            </div>
+            <div class="tracks-container">
+              <h3>Tracklist</h3>
+              <ol class="tracklist">
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">01</span>
+                    <div class="track-info">
+                      <span class="track-name">Another Day of Spring</span>
+                      <span class="track-key">Key: A</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Chromatic Drift/Another Day of Spring.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">02</span>
+                    <div class="track-info">
+                      <span class="track-name">Ain't it Sharp</span>
+                      <span class="track-key">Key: A#</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Chromatic Drift/Ain't it Sharp.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">03</span>
+                    <div class="track-info">
+                      <span class="track-name">Brown Emotion</span>
+                      <span class="track-key">Key: B</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Chromatic Drift/Brown Emotion.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">04</span>
+                    <div class="track-info">
+                      <span class="track-name">Chromatic Drift</span>
+                      <span class="track-key">Key: C</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Chromatic Drift/Chromatic Drift.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">05</span>
+                    <div class="track-info">
+                      <span class="track-name">Caring About You</span>
+                      <span class="track-key">Key: C#</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Chromatic Drift/Caring About You.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">06</span>
+                    <div class="track-info">
+                      <span class="track-name">Daft Unc</span>
+                      <span class="track-key">Key: D</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Chromatic Drift/Daft Unc.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">07</span>
+                    <div class="track-info">
+                      <span class="track-name">Dental Degree</span>
+                      <span class="track-key">Key: D#</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Chromatic Drift/Dental Degree.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">08</span>
+                    <div class="track-info">
+                      <span class="track-name">Evening Hour</span>
+                      <span class="track-key">Key: E</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Chromatic Drift/Evening Hour.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">09</span>
+                    <div class="track-info">
+                      <span class="track-name">Factory Fever</span>
+                      <span class="track-key">Key: F</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Chromatic Drift/Factory Fever.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">10</span>
+                    <div class="track-info">
+                      <span class="track-name">Fuji Funkline</span>
+                      <span class="track-key">Key: F#</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Chromatic Drift/Fuji Funkline.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">11</span>
+                    <div class="track-info">
+                      <span class="track-name">Golden Riviera</span>
+                      <span class="track-key">Key: G</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Chromatic Drift/Golden Riviera.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">12</span>
+                    <div class="track-info">
+                      <span class="track-name">Gulfstream</span>
+                      <span class="track-key">Key: G#</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Chromatic Drift/Gulfstream.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <!-- Better Times 3000 Album -->
+        <article class="album-showcase album-showcase--reverse">
+          <div class="album-showcase__artwork">
+            <img src="assets/images/better-times-3000-cover.png" alt="Better Times 3000 Album Cover" />
+            <div class="album-glow album-glow--better-times"></div>
+          </div>
+          <div class="album-showcase__content">
+            <div class="album-header">
+              <h2 class="album-title">Better Times 3000</h2>
+              <p class="album-meta">12 Tracks • 2025 • Disco-Funk with Vocals</p>
+            </div>
+            <p class="album-description">A warm, nostalgic journey through the golden era of 1970s and 1980s dance music. Inspired by CHIC's timeless elegance, Bee Gees' shimmering disco, and Daft Punk's modern polish. Features Nile Rodgers-style guitar chanks, Bernard Edwards-influenced basslines, and warm female backing vocals throughout. Each track feels like stepping onto a disco floor under silver lights—fast, funky, glamorous, and full of movement.</p>
+            <div class="album-tags">
+              <span class="tag">Disco</span>
+              <span class="tag">Funk</span>
+              <span class="tag">70s</span>
+              <span class="tag">80s</span>
+              <span class="tag">CHIC</span>
+            </div>
+            <div class="tracks-container">
+              <h3>Tracklist</h3>
+              <ol class="tracklist">
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">01</span>
+                    <div class="track-info">
+                      <span class="track-name">Stay With Me Tonight</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Better Times 3000/01 Stay With Me Tonight.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">02</span>
+                    <div class="track-info">
+                      <span class="track-name">Echoes of You</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Better Times 3000/02 Echoes of You.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">03</span>
+                    <div class="track-info">
+                      <span class="track-name">Slow Burning Lights</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Better Times 3000/03 Slow Burning Lights.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">04</span>
+                    <div class="track-info">
+                      <span class="track-name">Rhythm in My Veins</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Better Times 3000/04 Rhythm in My Veins.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">05</span>
+                    <div class="track-info">
+                      <span class="track-name">Rhythm Still in My Veins</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Better Times 3000/05 Rhythm Still in My Veins.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">06</span>
+                    <div class="track-info">
+                      <span class="track-name">Golden Hour Love</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Better Times 3000/06 Golden Hour Love.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">07</span>
+                    <div class="track-info">
+                      <span class="track-name">Touch of Midnight</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Better Times 3000/07 Touch of Midnight.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">08</span>
+                    <div class="track-info">
+                      <span class="track-name">Forever Feels Like This</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Better Times 3000/08 Forever Feels Like This.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">09</span>
+                    <div class="track-info">
+                      <span class="track-name">Swaying With the Stars</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Better Times 3000/09 Swaying With the Stars.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">10</span>
+                    <div class="track-info">
+                      <span class="track-name">Cold but Free</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Better Times 3000/10 Cold but Free.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">11</span>
+                    <div class="track-info">
+                      <span class="track-name">Cold No More</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Better Times 3000/11 Cold No More.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item">
+                    <span class="track-number">12</span>
+                    <div class="track-info">
+                      <span class="track-name">Dawn of the Night</span>
+                    </div>
+                    <audio controls class="track-player">
+                      <source src="albums/Better Times 3000/12 Dawn of the Night.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </article>
       </section>
 
-      <section class="media panel">
+      <section class="panel panel--bright">
         <div class="panel__text">
-          <h2>Join the drift</h2>
-          <p>Get early art reveals, behind-the-DAW streams, and remix-ready stems. Stoch shares open-source tools, AI prompt presets, and candid notes on what works (and what glitches beautifully).</p>
+          <h2>About the Artist</h2>
+          <p>Stoch is an AI-driven music project that bridges the gap between classic funk & disco and futuristic sound design. Each track is crafted with attention to the golden era's groove philosophy while embracing modern production techniques and AI-assisted composition.</p>
+          <p>Drawing inspiration from legends like Nile Rodgers, Bernard Edwards, Prince, and Daft Punk, as well as contemporary innovators like Parcels, Khruangbin, and Vulfpeck, Stoch creates music that feels both timeless and forward-thinking.</p>
           <div class="cta-stack">
-            <a class="btn primary" href="mailto:stoch@chromaticdrift.com">Request press kit</a>
+            <a class="btn primary" href="mailto:stoch@chromaticdrift.com">Contact</a>
             <a class="btn secondary" href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
             <a class="btn secondary" href="https://soundcloud.com" target="_blank" rel="noreferrer">SoundCloud</a>
           </div>
         </div>
         <div class="panel__card">
-          <h3>Live checkpoints</h3>
-          <ul>
-            <li><strong>Dec 2025:</strong> First single + visualizer</li>
-            <li><strong>Jan 2026:</strong> Long-form making-of stream</li>
-            <li><strong>Feb 2026:</strong> Remix pack drop</li>
-          </ul>
-          <p class="small">Want to collaborate? Drop a note with your vibe + links.</p>
+          <h3>Production Notes</h3>
+          <p>All tracks feature detailed production notes, instrument references, and creative workflows documented in each album's markdown file. The repository is open for exploration—dive into the song plans, see the creative process, and understand how each track came to life.</p>
+          <a href="https://github.com/ofurn/stoch" class="btn tertiary" target="_blank" rel="noreferrer">View Repository</a>
         </div>
       </section>
     </main>

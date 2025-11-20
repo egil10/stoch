@@ -34,7 +34,7 @@ main {
 .hero {
   padding: 4rem max(5vw, 2.5rem) 5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 3rem;
   align-items: center;
 }
@@ -54,8 +54,9 @@ main {
 
 .hero__content .lede {
   font-size: 1.2rem;
-  max-width: 40ch;
+  max-width: 45ch;
   color: var(--muted);
+  line-height: 1.7;
 }
 
 .hero__cta {
@@ -67,30 +68,264 @@ main {
 
 .hero__art {
   position: relative;
-  min-height: 260px;
-  border-radius: 24px;
-  border: 1px solid var(--border);
+  width: 100%;
+}
+
+.hero__art-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  aspect-ratio: 1;
+}
+
+.hero__art-item {
+  position: relative;
+  border-radius: 20px;
   overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  background: linear-gradient(135deg, rgba(255, 95, 109, 0.5), rgba(54, 207, 211, 0.5));
+  border: 1px solid var(--border);
+  background: var(--panel);
+  transition: transform 300ms ease, box-shadow 300ms ease;
 }
 
-.hero__art span {
-  padding: 1.5rem;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
+.hero__art-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(255, 95, 109, 0.3);
 }
 
-.art-glow {
+.hero__art-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.art-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 30%, rgba(255, 214, 102, 0.7), transparent 55%),
-    radial-gradient(circle at 80% 20%, rgba(54, 207, 211, 0.7), transparent 45%),
-    radial-gradient(circle at 50% 80%, rgba(255, 95, 109, 0.7), transparent 50%);
-  mix-blend-mode: screen;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+  pointer-events: none;
+}
+
+.albums-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-heading h2 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  margin: 0 0 0.5rem;
+}
+
+.section-heading p {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
+.album-showcase {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 3rem;
+  align-items: start;
+  padding: 2rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.album-showcase--reverse {
+  grid-template-columns: 1fr 400px;
+}
+
+.album-showcase--reverse .album-showcase__artwork {
+  order: 2;
+}
+
+.album-showcase--reverse .album-showcase__content {
+  order: 1;
+}
+
+.album-showcase__artwork {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.album-showcase__artwork img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.album-glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 20px;
+  opacity: 0.6;
+  z-index: -1;
+  filter: blur(20px);
+  transition: opacity 300ms ease;
+}
+
+.album-glow--chromatic {
+  background: radial-gradient(circle at center, rgba(255, 95, 109, 0.8), rgba(54, 207, 211, 0.6));
+}
+
+.album-glow--better-times {
+  background: radial-gradient(circle at center, rgba(255, 214, 102, 0.8), rgba(255, 95, 109, 0.6));
+}
+
+.album-showcase:hover .album-glow {
+  opacity: 0.8;
+}
+
+.album-showcase__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.album-header {
+  margin-bottom: 0.5rem;
+}
+
+.album-title {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin: 0 0 0.5rem;
+}
+
+.album-meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.album-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+.album-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.tag {
+  padding: 0.4rem 0.9rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: all 200ms ease;
+}
+
+.tag:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.tracks-container {
+  margin-top: 1rem;
+}
+
+.tracks-container h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.tracklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tracklist li {
+  padding: 0;
+}
+
+.track-item {
+  display: grid;
+  grid-template-columns: 3rem 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.9rem 1.2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 200ms ease;
+}
+
+.track-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary);
+  transform: translateX(4px);
+}
+
+.track-number {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 600;
+  text-align: center;
+}
+
+.track-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.track-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.track-key {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.track-player {
+  width: 200px;
+  height: 32px;
+  opacity: 0.7;
+  transition: opacity 200ms ease;
+}
+
+.track-item:hover .track-player {
+  opacity: 1;
+}
+
+.track-player::-webkit-media-controls-panel {
+  background-color: rgba(5, 1, 10, 0.9);
 }
 
 .panel {
@@ -116,6 +351,7 @@ main {
 
 .panel__card h3 {
   margin-top: 0;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .meta {
@@ -127,44 +363,6 @@ main {
 .meta li {
   margin-bottom: 0.6rem;
   color: var(--muted);
-}
-
-.tracks {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.section-heading h2 {
-  font-family: 'Space Grotesk', 'Inter', sans-serif;
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin: 0 0 0.5rem;
-}
-
-.track-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-
-.track-grid article {
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(6px);
-  transition: transform 200ms ease, border-color 200ms ease;
-}
-
-.track-grid article:hover {
-  transform: translateY(-6px);
-  border-color: var(--primary);
-}
-
-.track-grid h3 {
-  margin-top: 0;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.5rem;
 }
 
 .cta-stack {
@@ -186,6 +384,12 @@ main {
   align-items: center;
   justify-content: center;
   border: 1px solid transparent;
+  transition: all 200ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 95, 109, 0.3);
 }
 
 .btn.primary {
@@ -209,6 +413,10 @@ main {
   padding-left: 0;
 }
 
+.btn.tertiary:hover {
+  padding-left: 0.5rem;
+}
+
 code {
   font-family: 'Space Grotesk', monospace;
   background: rgba(255, 255, 255, 0.08);
@@ -224,6 +432,52 @@ footer {
   font-size: 0.9rem;
 }
 
+@media (max-width: 1024px) {
+  .album-showcase,
+  .album-showcase--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .album-showcase--reverse .album-showcase__artwork,
+  .album-showcase--reverse .album-showcase__content {
+    order: initial;
+  }
+
+  .album-showcase__artwork {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__art-grid {
+    grid-template-columns: 1fr;
+    aspect-ratio: 1 / 1;
+  }
+
+  .hero__art-item {
+    aspect-ratio: 1;
+  }
+
+  .track-item {
+    grid-template-columns: 2rem 1fr;
+    gap: 0.75rem;
+  }
+
+  .track-player {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .album-showcase {
+    padding: 1.5rem;
+  }
+
+  .album-showcase__artwork {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 640px) {
   .hero__cta {
     flex-direction: column;
@@ -231,7 +485,17 @@ footer {
 
   .panel,
   .panel__card,
-  .track-grid article {
+  .track-item,
+  .album-showcase__artwork {
     border-radius: 16px;
+  }
+
+  .hero {
+    padding: 3rem max(5vw, 2.5rem) 4rem;
+  }
+
+  main {
+    padding: 3rem max(5vw, 2.5rem) 4rem;
+    gap: 3rem;
   }
 }
