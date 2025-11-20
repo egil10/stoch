@@ -92,7 +92,8 @@ class StochPlayer {
 
   setupEventListeners() {
     // Play/Pause buttons - use passive listeners for better performance
-    document.addEventListener('click', (e) => {
+    // Support both click and touch for all interactive elements
+    const handleInteraction = (e) => {
       if (e.target.closest('[data-action="play-track"]')) {
         const trackEl = e.target.closest('[data-track-src]');
         this.playTrack(trackEl);
@@ -110,7 +111,8 @@ class StochPlayer {
         const progressBar = e.target.closest('.progress-bar');
         if (progressBar && this.currentTrack) {
           const rect = progressBar.getBoundingClientRect();
-          const percent = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+          const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+          const percent = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
           this.seek(percent);
         }
       } else if (e.target.closest('[data-action="prev-track"]') || e.target.closest('#prev-track-btn')) {
@@ -146,15 +148,22 @@ class StochPlayer {
       });
     }
 
-    // Now playing bar seek
+    // Now playing bar seek - support both click and touch
     const nowPlayingProgressBar = document.getElementById('now-playing-progress-bar');
     if (nowPlayingProgressBar) {
-      nowPlayingProgressBar.addEventListener('click', (e) => {
+      const handleSeek = (e) => {
         if (this.currentTrack && this.currentTrack.audio.duration) {
           const rect = nowPlayingProgressBar.getBoundingClientRect();
-          const percent = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+          const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+          const percent = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
           this.seek(percent);
         }
+      };
+      
+      nowPlayingProgressBar.addEventListener('click', handleSeek);
+      nowPlayingProgressBar.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        handleSeek(e);
       });
     }
   }
@@ -405,7 +414,7 @@ class StochPlayer {
       this.nowPlayingBar.style.display = 'grid';
       this.nowPlayingBar.classList.remove('hidden');
       // Add bottom padding to body to prevent content from being hidden
-      document.body.style.paddingBottom = '80px';
+      document.body.style.paddingBottom = '105px';
     }
   }
 

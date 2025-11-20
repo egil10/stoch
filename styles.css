@@ -11,26 +11,26 @@
   --border: rgba(255, 255, 255, 0.15);
 }
 
-/* Light mode */
+/* Light mode - Simplified and Fixed */
 [data-theme="light"] {
   --bg: #ffffff;
   --bg-accent: #f5f5f7;
-  --text: #1d1d1f;
-  --text-primary: #1d1d1f;
-  --text-secondary: rgba(29, 29, 31, 0.7);
-  --muted: rgba(29, 29, 31, 0.65);
+  --text: #1a1a1a;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --muted: #666666;
   --primary: #ff5f6d;
   --primary-dark: #d94c58;
   --secondary: #36cfd3;
   --panel: rgba(0, 0, 0, 0.04);
-  --panel-bright: rgba(0, 0, 0, 0.06);
-  --border: rgba(0, 0, 0, 0.12);
-  --progress-bg: rgba(0, 0, 0, 0.1);
+  --panel-bright: rgba(0, 0, 0, 0.08);
+  --border: rgba(0, 0, 0, 0.15);
+  --progress-bg: rgba(0, 0, 0, 0.12);
   --card-bg: rgba(0, 0, 0, 0.03);
   --overlay-bg: rgba(255, 255, 255, 0.9);
   --shadow-color: rgba(0, 0, 0, 0.1);
   --button-bg: rgba(0, 0, 0, 0.05);
-  --button-hover: rgba(0, 0, 0, 0.08);
+  --button-hover: rgba(0, 0, 0, 0.1);
 }
 
 /* Dark mode (default) */
@@ -85,6 +85,30 @@
   transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000px;
+}
+
+/* Mobile touch optimizations */
+button,
+a,
+input[type="range"],
+.progress-bar,
+.now-playing-progress-bar {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  button, a {
+    -webkit-tap-highlight-color: rgba(255, 95, 109, 0.2);
+  }
+  
+  .progress-bar,
+  .now-playing-progress-bar {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: pan-x;
+  }
 }
 
 body {
@@ -770,8 +794,8 @@ code {
   bottom: 0;
   left: 0;
   right: 0;
-  min-height: 80px;
-  max-height: 80px;
+  min-height: 85px;
+  max-height: 85px;
   background: var(--panel-bright);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -780,7 +804,7 @@ code {
   grid-template-columns: auto 1fr 200px;
   gap: 1.5rem;
   align-items: center;
-  padding: 0.75rem max(2rem, 5vw) 1rem;
+  padding: 0.75rem max(2rem, 5vw) 1.5rem;
   z-index: 1000;
   transform: translateZ(0);
   will-change: transform;
@@ -819,15 +843,16 @@ code {
 
 @media (max-width: 768px) {
   .now-playing-bar {
-    min-height: 80px;
-    max-height: 80px;
-    padding: 0.75rem 1rem;
-    grid-template-columns: auto 1fr 80px;
+    min-height: 85px;
+    max-height: 85px;
+    padding: 0.75rem 1rem 1.25rem;
+    grid-template-columns: auto 1fr auto;
     gap: 0.75rem;
   }
   
   .now-playing-bar-content {
-    gap: 0.35rem;
+    gap: 0.5rem;
+    min-width: 0;
   }
   
   .now-playing-track {
@@ -836,10 +861,49 @@ code {
   
   .now-playing-extra {
     margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .now-playing-main-controls {
+    gap: 0.75rem;
+  }
+  
+  .now-playing-btn {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+  }
+  
+  .now-playing-btn.play-pause-btn {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+  }
+  
+  .now-playing-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .now-playing-progress-container {
+    gap: 0.5rem;
+  }
+  
+  .now-playing-time {
+    font-size: 0.7rem;
+    min-width: 2rem;
+  }
+  
+  .now-playing-progress-bar {
+    min-height: 4px;
   }
   
   body {
-    padding-bottom: 80px !important;
+    padding-bottom: 85px !important;
   }
 }
 
@@ -875,16 +939,6 @@ code {
   color: var(--text);
 }
 
-@media (max-width: 1200px) {
-  .now-playing-bar {
-    padding: 0.75rem 1.5rem;
-    gap: 0.5rem;
-  }
-  
-  .now-playing-bar-content {
-    gap: 1rem;
-  }
-}
 
 .now-playing-track {
   display: flex;
@@ -1200,7 +1254,7 @@ code {
   position: relative;
   z-index: 1;
   transition: border-color 0.3s ease, background-color 0.3s ease;
-  margin-bottom: 80px; /* Space for now playing bar */
+  margin-bottom: 105px; /* Space for now playing bar */
 }
 
 .footer-container {
@@ -1380,6 +1434,11 @@ code {
 
 body {
   transition: padding-bottom 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-bottom: 0;
+}
+
+body[style*="padding-bottom"] {
+  padding-bottom: 105px !important;
 }
 
 /* 8-bit Visualizer */
@@ -1545,6 +1604,11 @@ body {
     grid-template-columns: 1fr;
     aspect-ratio: 1 / 1;
   }
+  
+  .hero__art-grid--three {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
 
   .hero__art-item {
     aspect-ratio: 1;
@@ -1554,16 +1618,33 @@ body {
     grid-template-columns: auto 1fr;
     gap: 0.75rem;
     padding: 0.9rem;
+    min-height: 60px;
+  }
+  
+  .track-play-btn {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .track-number {
     display: none;
+  }
+  
+  .track-info {
+    min-width: 0;
   }
 
   .track-time-info {
     grid-column: 1 / -1;
     justify-self: flex-start;
     margin-top: 0.5rem;
+    gap: 0.5rem;
+  }
+  
+  .track-time, .track-duration {
+    font-size: 0.85rem;
   }
 
   .progress-bar {
@@ -1571,20 +1652,35 @@ body {
     position: relative;
     margin-top: 0.5rem;
     border-radius: 12px;
+    height: 4px;
+    min-height: 4px;
+  }
+  
+  .progress-bar:hover {
+    height: 6px;
   }
 
   .album-controls {
     gap: 0.75rem;
+    flex-wrap: wrap;
   }
 
   .btn-album-play {
-    padding: 0.75rem 1.4rem;
+    padding: 0.85rem 1.5rem;
     font-size: 0.9rem;
+    min-height: 44px;
   }
 
   .btn-control {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .btn-control svg {
+    width: 18px;
+    height: 18px;
   }
 
   .album-showcase {
@@ -1594,28 +1690,17 @@ body {
   .album-showcase__artwork {
     max-width: 100%;
   }
-
-  .now-playing-bar {
-    grid-template-columns: 1fr;
-    height: auto;
-    padding: 0.75rem;
-    gap: 0.75rem;
+  
+  .album-title {
+    font-size: clamp(1.75rem, 5vw, 2rem);
   }
-
-  .visualizer-container {
-    display: none; /* Hide on mobile to save space */
+  
+  .album-description {
+    font-size: 1rem;
   }
-
-  .now-playing-extra {
-    display: none;
-  }
-
-  .now-playing-controls {
-    width: 100%;
-  }
-
-  .now-playing-progress-container {
-    max-width: 100%;
+  
+  .tracks-container h3 {
+    font-size: 1.25rem;
   }
 
   .footer {
@@ -1631,26 +1716,21 @@ body {
     margin-bottom: 2rem;
     padding-bottom: 2rem;
   }
-}
+  
+  .volume-control {
+    display: none !important;
+  }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 769px) {
   .now-playing-bar {
-    grid-template-columns: auto 1fr 1fr;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
   }
-
-  .visualizer-container {
-    width: 80px;
-    height: 80px;
-  }
-
-  .visualizer-canvas {
-    width: 80px;
-    height: 80px;
-  }
-
+  
   .now-playing-extra {
-    display: none;
+    margin-left: 0.5rem;
+    display: flex;
   }
 }
 
