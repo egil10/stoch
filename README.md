@@ -1,5 +1,7 @@
 # Stoch - Discography
 
+🌐 **Live Site:** [https://egil10.github.io/stoch/](https://egil10.github.io/stoch/)
+
 Welcome to the production log and artist site for **Stoch**, an AI-driven music project that bends funk, disco, and futuristic textures across every key. This repository hosts two complete albums, artwork assets, song blueprints, and track notes, keeping the creative flow organized from first riff to final master.
 
 ## Albums
@@ -83,3 +85,7 @@ The site showcases both albums with:
 - Render album art variants and create a gallery
 
 Have fun drifting through the spectrum.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
