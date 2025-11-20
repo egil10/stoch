@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stoch - Chromatic Drift</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">AI FUNK / DISCO / FUTURE-SOUL</p>
+        <h1>Chromatic Drift</h1>
+        <p class="lede">A kaleidoscopic album by Stoch, sculpted with AI instruments, human groove references, and fearless color theory.</p>
+        <div class="hero__cta">
+          <a class="btn primary" href="#album">Dive into the album</a>
+          <a class="btn secondary" href="https://open.spotify.com" target="_blank" rel="noreferrer">Follow on Spotify</a>
+        </div>
+      </div>
+      <div class="hero__art">
+        <div class="art-glow"></div>
+        <span>Artwork incoming - stay tuned</span>
+      </div>
+    </header>
+
+    <main>
+      <section id="album" class="panel panel--bright">
+        <div class="panel__text">
+          <h2>Spectrum-storytelling in every key</h2>
+          <p>Each song in Chromatic Drift lives in a unique key, pulling references from CHIC, Prince, Parcels, 90s house, and tomorrow's neural dreams. The repo hosts the stems, arrangements, and Suno-friendly prompts so you can peek behind the curtain.</p>
+          <ul class="meta">
+            <li><strong>Release window:</strong> Q1 2026</li>
+            <li><strong>Format:</strong> AI-assisted instrumentals + select vocal features</li>
+            <li><strong>HQ files:</strong> Will appear in <code>chromatic-drift-cover/</code></li>
+          </ul>
+        </div>
+        <div class="panel__card">
+          <h3>Where to dig in</h3>
+          <ol>
+            <li>Browse song plans by key in <code>song-plans/</code></li>
+            <li>Sketch visuals inside <code>assets/</code></li>
+            <li>Drop final MP3s into <code>chromatic-drift-cover/</code></li>
+          </ol>
+          <a href="https://github.com/ofurn/stoch" class="btn tertiary" target="_blank" rel="noreferrer">View the repo</a>
+        </div>
+      </section>
+
+      <section class="tracks">
+        <div class="section-heading">
+          <h2>Keys in orbit</h2>
+          <p>12 tracks, 12 moods. More will unlock as they exit the lab.</p>
+        </div>
+        <div class="track-grid">
+          <article>
+            <h3>A</h3>
+            <p>Funk engine room. Nile Rodgers chops, Bernard Edwards swagger.</p>
+          </article>
+          <article>
+            <h3>A#</h3>
+            <p>Chrome-plated boogie with vocoder hooks and fluorescent bass.</p>
+          </article>
+          <article>
+            <h3>B</h3>
+            <p>Slow-burn future soul, VHS strings, midnight subway percussion.</p>
+          </article>
+          <article>
+            <h3>C</h3>
+            <p>Glassine house beats that melt into Balearic sunrise guitars.</p>
+          </article>
+          <article>
+            <h3>C#</h3>
+            <p>Industrial funk workout - laser toms, talkbox sermons, purple lights.</p>
+          </article>
+          <article>
+            <h3>D</h3>
+            <p>Neo-disco jammer with horns that feel like train signals.</p>
+          </article>
+          <article>
+            <h3>D#</h3>
+            <p>Broken-beat detour, dusty vinyl crackle over modular bleeps.</p>
+          </article>
+          <article>
+            <h3>E</h3>
+            <p>Cinematic synth funk, big chorus energy, confetti snares.</p>
+          </article>
+          <article>
+            <h3>F</h3>
+            <p>Velvet lounge groove - Rhodes, brushed drums, bass in octaves.</p>
+          </article>
+          <article>
+            <h3>F#</h3>
+            <p>Afrofuturist pulse, polyrhythmic percussion, sci-fi choirs.</p>
+          </article>
+          <article>
+            <h3>G</h3>
+            <p>Analog rave gospel. Choir pads and acid bass hold hands.</p>
+          </article>
+          <article>
+            <h3>G#</h3>
+            <p>Closing credits. Kaleidoscopic arps, glitch guitars, hopeful fade.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="media panel">
+        <div class="panel__text">
+          <h2>Join the drift</h2>
+          <p>Get early art reveals, behind-the-DAW streams, and remix-ready stems. Stoch shares open-source tools, AI prompt presets, and candid notes on what works (and what glitches beautifully).</p>
+          <div class="cta-stack">
+            <a class="btn primary" href="mailto:stoch@chromaticdrift.com">Request press kit</a>
+            <a class="btn secondary" href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+            <a class="btn secondary" href="https://soundcloud.com" target="_blank" rel="noreferrer">SoundCloud</a>
+          </div>
+        </div>
+        <div class="panel__card">
+          <h3>Live checkpoints</h3>
+          <ul>
+            <li><strong>Dec 2025:</strong> First single + visualizer</li>
+            <li><strong>Jan 2026:</strong> Long-form making-of stream</li>
+            <li><strong>Feb 2026:</strong> Remix pack drop</li>
+          </ul>
+          <p class="small">Want to collaborate? Drop a note with your vibe + links.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Copyright <span id="year"></span> Stoch - Built for GitHub Pages</p>
+    </footer>
+    <script>
+      const yearEl = document.getElementById('year');
+      yearEl.textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
