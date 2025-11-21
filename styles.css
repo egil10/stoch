@@ -160,6 +160,11 @@ main {
   gap: 0.75rem;
 }
 
+.hero__art-grid--four {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
 .hero__art-item {
   position: relative;
   border-radius: 20px;
@@ -296,6 +301,10 @@ main {
 
 .album-glow--elements {
   background: radial-gradient(circle at center, rgba(255, 95, 109, 0.8), rgba(54, 207, 211, 0.6), rgba(255, 214, 102, 0.5));
+}
+
+.album-glow--norge {
+  background: radial-gradient(circle at center, rgba(220, 20, 60, 0.8), rgba(255, 95, 109, 0.6), rgba(255, 255, 255, 0.4));
 }
 
 .album-showcase:hover .album-glow {
@@ -1447,6 +1456,11 @@ body[style*="padding-bottom"] {
   }
   
   .hero__art-grid--three {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .hero__art-grid--four {
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }

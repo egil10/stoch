@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Stoch - AI Funk & Disco Artist. Explore two complete albums: Chromatic Drift and Better Times 3000." />
+    <meta name="description" content="Stoch - AI Funk & Disco Artist. Explore four complete albums: Chromatic Drift, Better Times 3000, Elements, and NORGE TIL VM." />
     <title>Stoch - AI Funk & Disco Artist</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="alternate icon" href="favicon.svg" />
     <link rel="apple-touch-icon" href="favicon.svg" />
     <link rel="preload" href="assets/images/chromatic-drift-cover.png" as="image" />
     <link rel="preload" href="assets/images/better-times-3000-cover.png" as="image" />
+    <link rel="preload" href="assets/images/elements-cover.png" as="image" />
+    <link rel="preload" href="assets/images/norge-til-vm-cover.png" as="image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -30,14 +32,14 @@
       <div class="hero__content">
         <p class="eyebrow">AI FUNK / DISCO / FUTURE-SOUL</p>
         <h1>Stoch</h1>
-        <p class="lede">Crafting kaleidoscopic soundscapes where funk meets disco, where CHIC collides with Daft Punk, and where every key tells a story. Three albums. Infinite grooves. Welcome to the drift.</p>
+        <p class="lede">Crafting kaleidoscopic soundscapes where funk meets disco, where CHIC collides with Daft Punk, and where every key tells a story. Four albums. Infinite grooves. Welcome to the drift.</p>
         <div class="hero__cta">
           <a class="btn primary" href="#albums">Explore Albums</a>
           <a class="btn secondary" href="https://open.spotify.com" target="_blank" rel="noreferrer">Follow on Spotify</a>
         </div>
       </div>
       <div class="hero__art">
-        <div class="hero__art-grid hero__art-grid--three">
+        <div class="hero__art-grid hero__art-grid--four">
           <div class="hero__art-item">
             <img src="assets/images/chromatic-drift-cover.png" alt="Chromatic Drift Album Cover" loading="eager" decoding="async" />
             <div class="art-overlay"></div>
@@ -50,6 +52,10 @@
             <img src="assets/images/elements-cover.png" alt="Elements Album Cover" loading="eager" decoding="async" />
             <div class="art-overlay"></div>
           </div>
+          <div class="hero__art-item">
+            <img src="assets/images/norge-til-vm-cover.png" alt="NORGE TIL VM Album Cover" loading="eager" decoding="async" />
+            <div class="art-overlay"></div>
+          </div>
         </div>
       </div>
     </header>
@@ -58,7 +64,7 @@
       <section id="albums" class="albums-section">
         <div class="section-heading">
           <h2>Discography</h2>
-          <p>Three complete albums. Each a journey through time, genre, and color.</p>
+          <p>Four complete albums. Each a journey through time, genre, and color.</p>
         </div>
 
         <!-- Chromatic Drift Album -->
@@ -911,6 +917,311 @@
             </div>
           </div>
           </article>
+
+        <!-- NORGE TIL VM Album -->
+        <article class="album-showcase album-showcase--reverse" data-album-id="norge-til-vm">
+          <div class="album-showcase__artwork">
+            <img src="assets/images/norge-til-vm-cover.png" alt="NORGE TIL VM Album Cover" loading="lazy" decoding="async" />
+            <div class="album-glow album-glow--norge"></div>
+          </div>
+          <div class="album-showcase__content">
+            <div class="album-header">
+              <h2 class="album-title">NORGE TIL VM</h2>
+              <p class="album-meta">14 Tracks • 2025 • Funk/Disco Anthems</p>
+            </div>
+            <p class="album-description">A celebration of Norwegian football spirit through funk and disco. This album captures the energy, passion, and unity of Norway's journey to the World Cup, blending infectious grooves with anthemic melodies that inspire and uplift. From the mountains to the fjords, from San Siro to Mexico 2026—every track pulses with the heartbeat of a nation united in football.</p>
+            <div class="album-tags">
+              <span class="tag">Funk</span>
+              <span class="tag">Disco</span>
+              <span class="tag">Anthem</span>
+              <span class="tag">Football</span>
+              <span class="tag">Norwegian</span>
+            </div>
+            <div class="album-controls">
+              <button class="btn-album-play" data-action="play-album">
+                <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <span>Play Album</span>
+              </button>
+              <button class="btn-control" data-action="toggle-shuffle" aria-label="Shuffle: Off">
+                <svg class="icon-shuffle" viewBox="0 0 24 24"><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg>
+              </button>
+              <button class="btn-control" data-action="toggle-repeat" aria-label="Repeat: Off">
+                <svg class="icon-repeat" viewBox="0 0 24 24"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>
+              </button>
+            </div>
+            <div class="tracks-container">
+              <h3>Tracklist</h3>
+              <ol class="tracklist">
+                <li>
+                  <div class="track-item" data-track-src="albums/NORGE TIL VM/01 Rødt Hvitt Blått Vi Står Sammen.mp3" data-track-name="Rødt Hvitt Blått Vi Står Sammen">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">01</span>
+                    <div class="track-info">
+                      <span class="track-name">Rødt Hvitt Blått Vi Står Sammen</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/NORGE TIL VM/02 Slaget På San Siro.mp3" data-track-name="Slaget På San Siro">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">02</span>
+                    <div class="track-info">
+                      <span class="track-name">Slaget På San Siro</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/NORGE TIL VM/03 Solbakkens Menn.mp3" data-track-name="Solbakkens Menn">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">03</span>
+                    <div class="track-info">
+                      <span class="track-name">Solbakkens Menn</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/NORGE TIL VM/04 Fra Fjell Til Fjord.mp3" data-track-name="Fra Fjell Til Fjord">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">04</span>
+                    <div class="track-info">
+                      <span class="track-name">Fra Fjell Til Fjord</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/NORGE TIL VM/05 Til VM Vi Skal.mp3" data-track-name="Til VM Vi Skal">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">05</span>
+                    <div class="track-info">
+                      <span class="track-name">Til VM Vi Skal</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/NORGE TIL VM/06 Våre Helter.mp3" data-track-name="Våre Helter">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">06</span>
+                    <div class="track-info">
+                      <span class="track-name">Våre Helter</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/NORGE TIL VM/07 Nordic Giants.mp3" data-track-name="Nordic Giants">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">07</span>
+                    <div class="track-info">
+                      <span class="track-name">Nordic Giants</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/NORGE TIL VM/08 Bobb Nusa Anthem.mp3" data-track-name="Bobb Nusa Anthem">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">08</span>
+                    <div class="track-info">
+                      <span class="track-name">Bobb Nusa Anthem</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/NORGE TIL VM/09 Legends in Motion.mp3" data-track-name="Legends in Motion">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">09</span>
+                    <div class="track-info">
+                      <span class="track-name">Legends in Motion</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/NORGE TIL VM/10 Mot Mexico 2026.mp3" data-track-name="Mot Mexico 2026">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">10</span>
+                    <div class="track-info">
+                      <span class="track-name">Mot Mexico 2026</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/NORGE TIL VM/11 Hver Pasning Hvert Spark.mp3" data-track-name="Hver Pasning Hvert Spark">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">11</span>
+                    <div class="track-info">
+                      <span class="track-name">Hver Pasning Hvert Spark</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/NORGE TIL VM/12 Vi Reiser Til USA.mp3" data-track-name="Vi Reiser Til USA">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">12</span>
+                    <div class="track-info">
+                      <span class="track-name">Vi Reiser Til USA</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/NORGE TIL VM/13 Til VM (Na-Na-Na).mp3" data-track-name="Til VM (Na-Na-Na)">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">13</span>
+                    <div class="track-info">
+                      <span class="track-name">Til VM (Na-Na-Na)</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/NORGE TIL VM/14 Til VM Vi Skal Igjen.mp3" data-track-name="Til VM Vi Skal Igjen">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">14</span>
+                    <div class="track-info">
+                      <span class="track-name">Til VM Vi Skal Igjen</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+          </article>
       </section>
 
       <section class="panel panel--bright">
@@ -994,6 +1305,7 @@
               <li><a href="#albums">Chromatic Drift</a></li>
               <li><a href="#albums">Better Times 3000</a></li>
               <li><a href="#albums">Elements</a></li>
+              <li><a href="#albums">NORGE TIL VM</a></li>
             </ul>
           </div>
           

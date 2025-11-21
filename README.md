@@ -2,7 +2,7 @@
 
 🌐 **Live Site:** [https://egil10.github.io/stoch/](https://egil10.github.io/stoch/)
 
-Welcome to **Stoch**, an AI-driven music project that crafts kaleidoscopic soundscapes where funk meets disco, where CHIC collides with Daft Punk, and where every key tells a story. This repository hosts three complete albums with full track listings, artwork, and an interactive web player—bringing the groove directly to your browser.
+Welcome to **Stoch**, an AI-driven music project that crafts kaleidoscopic soundscapes where funk meets disco, where CHIC collides with Daft Punk, and where every key tells a story. This repository hosts four complete albums with full track listings, artwork, and an interactive web player—bringing the groove directly to your browser.
 
 ## 🎵 Featured Albums
 
@@ -56,6 +56,25 @@ An electronic exploration of rhythmic elements, blending futuristic sound design
 - At Ways End
 - Rain & Echoes
 
+### NORGE TIL VM
+A celebration of Norwegian football spirit through funk and disco. This album captures the energy, passion, and unity of Norway's journey to the World Cup, blending infectious grooves with anthemic melodies that inspire and uplift. From the mountains to the fjords, from San Siro to Mexico 2026—every track pulses with the heartbeat of a nation united in football.
+
+**14 tracks** including:
+- Rødt Hvitt Blått Vi Står Sammen
+- Slaget På San Siro
+- Solbakkens Menn
+- Fra Fjell Til Fjord
+- Til VM Vi Skal
+- Våre Helter
+- Nordic Giants
+- Bobb Nusa Anthem
+- Legends in Motion
+- Mot Mexico 2026
+- Hver Pasning Hvert Spark
+- Vi Reiser Til USA
+- Til VM (Na-Na-Na)
+- Til VM Vi Skal Igjen
+
 ## 🎮 Interactive Web Player
 
 The site features a fully-functional, modern music player with:
@@ -77,10 +96,11 @@ stoch/
 ├── player.js               # Audio player logic and controls
 ├── theme.js                # Light/dark mode theme manager
 ├── visualizer.js           # Audio visualizer (optional)
-├── albums/                 # All three complete albums
+├── albums/                 # All four complete albums
 │   ├── Chromatic Drift/    # 12 MP3 tracks + cover art
 │   ├── Better Times 3000/  # 12 MP3 tracks + cover art
-│   └── Elements/           # 14 MP3 tracks + cover art
+│   ├── Elements/           # 14 MP3 tracks + cover art
+│   └── NORGE TIL VM/       # 14 MP3 tracks + cover art
 ├── assets/                 # Visual assets and artwork
 │   └── images/             # Album covers and images
 └── LICENSE                 # MIT License
