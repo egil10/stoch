@@ -2,7 +2,7 @@
 
 🌐 **Live Site:** [https://egil10.github.io/stoch/](https://egil10.github.io/stoch/)
 
-Welcome to **Stoch**, an AI-driven music project that crafts kaleidoscopic soundscapes where funk meets disco, where CHIC collides with Daft Punk, and where every key tells a story. This repository hosts four complete albums with full track listings, artwork, and an interactive web player—bringing the groove directly to your browser.
+Welcome to **Stoch**, an AI-driven music project that crafts kaleidoscopic soundscapes where funk meets disco, where CHIC collides with Daft Punk, and where every key tells a story. This repository hosts five complete albums with full track listings, artwork, and an interactive web player—bringing the groove directly to your browser.
 
 ## 🎵 Featured Albums
 
@@ -75,6 +75,20 @@ A celebration of Norwegian football spirit through funk and disco. This album ca
 - Til VM (Na-Na-Na)
 - Til VM Vi Skal Igjen
 
+### Bombaristoclat
+A sun-soaked tropical escape through funk and disco. This album captures the essence of beachside vibes, island rhythms, and carefree summer energy. From surf-side grooves to Caribbean heatwaves, each track transports you to paradise with infectious melodies and laid-back funk that makes you want to dance in the sand.
+
+**9 tracks** including:
+- Bombaristoclat
+- Beachside Love
+- Ocean Breeze Interlude
+- Clat
+- Island Roamer
+- Surf On It
+- Beach Lovers
+- Kingston Heatwave
+- Sail Along
+
 ## 🎮 Interactive Web Player
 
 The site features a fully-functional, modern music player with:
@@ -96,11 +110,12 @@ stoch/
 ├── player.js               # Audio player logic and controls
 ├── theme.js                # Light/dark mode theme manager
 ├── visualizer.js           # Audio visualizer (optional)
-├── albums/                 # All four complete albums
+├── albums/                 # All five complete albums
 │   ├── Chromatic Drift/    # 12 MP3 tracks + cover art
 │   ├── Better Times 3000/  # 12 MP3 tracks + cover art
 │   ├── Elements/           # 14 MP3 tracks + cover art
-│   └── NORGE TIL VM/       # 14 MP3 tracks + cover art
+│   ├── NORGE TIL VM/       # 14 MP3 tracks + cover art
+│   └── Bombaristoclat/     # 9 MP3 tracks + cover art
 ├── assets/                 # Visual assets and artwork
 │   └── images/             # Album covers and images
 └── LICENSE                 # MIT License

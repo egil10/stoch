@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Stoch - AI Funk & Disco Artist. Explore four complete albums: Chromatic Drift, Better Times 3000, Elements, and NORGE TIL VM." />
+    <meta name="description" content="Stoch - AI Funk & Disco Artist. Explore five complete albums: Chromatic Drift, Better Times 3000, Elements, NORGE TIL VM, and Bombaristoclat." />
     <title>Stoch - AI Funk & Disco Artist</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="alternate icon" href="favicon.svg" />
@@ -12,6 +12,7 @@
     <link rel="preload" href="assets/images/better-times-3000-cover.png" as="image" />
     <link rel="preload" href="assets/images/elements-cover.png" as="image" />
     <link rel="preload" href="assets/images/norge-til-vm-cover.png" as="image" />
+    <link rel="preload" href="assets/images/bombaristoclat-cover.png" as="image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -32,14 +33,14 @@
       <div class="hero__content">
         <p class="eyebrow">AI FUNK / DISCO / FUTURE-SOUL</p>
         <h1>Stoch</h1>
-        <p class="lede">Crafting kaleidoscopic soundscapes where funk meets disco, where CHIC collides with Daft Punk, and where every key tells a story. Four albums. Infinite grooves. Welcome to the drift.</p>
+        <p class="lede">Crafting kaleidoscopic soundscapes where funk meets disco, where CHIC collides with Daft Punk, and where every key tells a story. Five albums. Infinite grooves. Welcome to the drift.</p>
         <div class="hero__cta">
           <a class="btn primary" href="#albums">Explore Albums</a>
           <a class="btn secondary" href="https://open.spotify.com" target="_blank" rel="noreferrer">Follow on Spotify</a>
         </div>
       </div>
       <div class="hero__art">
-        <div class="hero__art-grid hero__art-grid--four">
+        <div class="hero__art-grid hero__art-grid--five">
           <div class="hero__art-item">
             <img src="assets/images/chromatic-drift-cover.png" alt="Chromatic Drift Album Cover" loading="eager" decoding="async" />
             <div class="art-overlay"></div>
@@ -56,6 +57,10 @@
             <img src="assets/images/norge-til-vm-cover.png" alt="NORGE TIL VM Album Cover" loading="eager" decoding="async" />
             <div class="art-overlay"></div>
           </div>
+          <div class="hero__art-item">
+            <img src="assets/images/bombaristoclat-cover.png" alt="Bombaristoclat Album Cover" loading="eager" decoding="async" />
+            <div class="art-overlay"></div>
+          </div>
         </div>
       </div>
     </header>
@@ -64,7 +69,7 @@
       <section id="albums" class="albums-section">
         <div class="section-heading">
           <h2>Discography</h2>
-          <p>Four complete albums. Each a journey through time, genre, and color.</p>
+          <p>Five complete albums. Each a journey through time, genre, and color.</p>
         </div>
 
         <!-- Chromatic Drift Album -->
@@ -341,8 +346,8 @@
                     </div>
                   </div>
                 </li>
-              </ol>
-            </div>
+          </ol>
+        </div>
           </div>
           </article>
 
@@ -351,7 +356,7 @@
           <div class="album-showcase__artwork">
             <img src="assets/images/better-times-3000-cover.png" alt="Better Times 3000 Album Cover" loading="lazy" decoding="async" />
             <div class="album-glow album-glow--better-times"></div>
-          </div>
+        </div>
           <div class="album-showcase__content">
             <div class="album-header">
               <h2 class="album-title">Better Times 3000</h2>
@@ -1222,6 +1227,216 @@
             </div>
           </div>
           </article>
+
+        <!-- Bombaristoclat Album -->
+        <article class="album-showcase" data-album-id="bombaristoclat">
+          <div class="album-showcase__artwork">
+            <img src="assets/images/bombaristoclat-cover.png" alt="Bombaristoclat Album Cover" loading="lazy" decoding="async" />
+            <div class="album-glow album-glow--bombaristoclat"></div>
+        </div>
+          <div class="album-showcase__content">
+            <div class="album-header">
+              <h2 class="album-title">Bombaristoclat</h2>
+              <p class="album-meta">9 Tracks • 2025 • Tropical Funk/Disco</p>
+            </div>
+            <p class="album-description">A sun-soaked tropical escape through funk and disco. This album captures the essence of beachside vibes, island rhythms, and carefree summer energy. From surf-side grooves to Caribbean heatwaves, each track transports you to paradise with infectious melodies and laid-back funk that makes you want to dance in the sand.</p>
+            <div class="album-tags">
+              <span class="tag">Funk</span>
+              <span class="tag">Disco</span>
+              <span class="tag">Tropical</span>
+              <span class="tag">Beach</span>
+              <span class="tag">Island</span>
+            </div>
+            <div class="album-controls">
+              <button class="btn-album-play" data-action="play-album">
+                <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <span>Play Album</span>
+              </button>
+              <button class="btn-control" data-action="toggle-shuffle" aria-label="Shuffle: Off">
+                <svg class="icon-shuffle" viewBox="0 0 24 24"><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg>
+              </button>
+              <button class="btn-control" data-action="toggle-repeat" aria-label="Repeat: Off">
+                <svg class="icon-repeat" viewBox="0 0 24 24"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>
+              </button>
+            </div>
+            <div class="tracks-container">
+              <h3>Tracklist</h3>
+              <ol class="tracklist">
+                <li>
+                  <div class="track-item" data-track-src="albums/Bombaristoclat/01 Bombaristoclat.mp3" data-track-name="Bombaristoclat">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">01</span>
+                    <div class="track-info">
+                      <span class="track-name">Bombaristoclat</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/Bombaristoclat/02 Beachside Love.mp3" data-track-name="Beachside Love">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">02</span>
+                    <div class="track-info">
+                      <span class="track-name">Beachside Love</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/Bombaristoclat/03 Ocean Breeze Interlude.mp3" data-track-name="Ocean Breeze Interlude">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">03</span>
+                    <div class="track-info">
+                      <span class="track-name">Ocean Breeze Interlude</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/Bombaristoclat/04 Clat.mp3" data-track-name="Clat">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">04</span>
+                    <div class="track-info">
+                      <span class="track-name">Clat</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/Bombaristoclat/05 Island Roamer.mp3" data-track-name="Island Roamer">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">05</span>
+                    <div class="track-info">
+                      <span class="track-name">Island Roamer</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/Bombaristoclat/06 Surf On It.mp3" data-track-name="Surf On It">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">06</span>
+                    <div class="track-info">
+                      <span class="track-name">Surf On It</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/Bombaristoclat/07 Beach Lovers.mp3" data-track-name="Beach Lovers">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">07</span>
+                    <div class="track-info">
+                      <span class="track-name">Beach Lovers</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/Bombaristoclat/08 Kingston Heatwave.mp3" data-track-name="Kingston Heatwave">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">08</span>
+                    <div class="track-info">
+                      <span class="track-name">Kingston Heatwave</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="track-item" data-track-src="albums/Bombaristoclat/09 Sail Along.mp3" data-track-name="Sail Along">
+                    <button class="track-play-btn" data-action="play-track" aria-label="Play">
+                      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+                    </button>
+                    <span class="track-number">09</span>
+                    <div class="track-info">
+                      <span class="track-name">Sail Along</span>
+                    </div>
+                    <div class="track-time-info">
+                      <span class="track-time">0:00</span>
+                      <span class="track-duration">--:--</span>
+                    </div>
+                    <div class="progress-bar" data-action="seek">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </article>
       </section>
 
       <section class="panel panel--bright">
@@ -1306,6 +1521,7 @@
               <li><a href="#albums">Better Times 3000</a></li>
               <li><a href="#albums">Elements</a></li>
               <li><a href="#albums">NORGE TIL VM</a></li>
+              <li><a href="#albums">Bombaristoclat</a></li>
             </ul>
           </div>
           
